@@ -1,0 +1,12 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+cond_by_year|object|8f86639db1706b40
+patients|object|f21f9c0bd27765ff
+proc_n_adults|object|f0c0a3f2ad852c79
+checks|object|d751cc3f4f842c65
+lastdate|object|80a8092f97525717
+top5|object|a3ac93d7f50bcb20
+procedures|object|d0c2435ec7951b54
+csv2parquet|function|072b58a7dd2b3bed
+patient_validation|stem|2ef7f94813917dc2|e015ad44dde9f8ef|b423504b210d8a64|756262446||t20528.6623230437s|s48b|48|rds|local|vector|||1.97||
+data|stem|59563ff12154097f|87f5902ed953433b|2c530c1562a7fbd1|33550471||t20528.6623237341s|s1745b|1745|rds|local|vector|||0||
+model|stem|442c37c734d08d75|693e4c90d947b5eb|d5bb4ffee10ba1eb|808688450||t20528.6623245744s|s108b|108|rds|local|vector|||0||
