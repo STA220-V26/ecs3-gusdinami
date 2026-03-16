@@ -182,11 +182,21 @@ patients[,
     labels = c("Single", "Married", "Divorced", "Widowed")
   )
 ]
+
+patients[,
+  gender := factor(
+    gender,
+    levels = c("M", "F", "X"),
+    labels = c("Male", "Female", "Non-binary")
+  )
+]
 ```
 
 Add factor levels for all variables deemed relevant. Use your code_scans from ECS1 or perhaps something like this (if using this code you need to understand what it does):
 
 ```{r}
+
+# didn't use this code
 fctr_candidates <-
   patients[, which(lapply(.SD, uniqueN) < 10), .SDcols = is.character] |>
   names()
