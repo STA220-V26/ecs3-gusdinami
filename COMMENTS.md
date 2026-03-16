@@ -1,0 +1,5 @@
+Everything was running smoothly until Part 4 (Derived Variables), when the code in the instructions produced an error saying that the `duckplyr` package was not installed. After installing it, There was another error saying that a function (`filter_out`) was not exported from `dplyr`. So, I realized that my version of `dplyr` was outdated, but when I tried to update it, I got an error message saying that the package was not available for my current version of R.
+
+That's when I remembered that my R version is several years old and that I have been clicking the "Remind me later" button for as long as I can remember. I tried to update R, but despite installing a newer version, when I checked which version I was running, it was still the older one. At that point, I decided to just finish the rest of the lab and explain why this part is missing, and then circle back when I find a moment.
+
+As for my reflections, my main takeaway here is that is that keeping R and its packages up to date is probably a better strategy from now on.
