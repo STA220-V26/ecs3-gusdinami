@@ -1,4 +1,4 @@
 *.zip
 data-fixed/*
-data
+data/**
 instructions_files/*

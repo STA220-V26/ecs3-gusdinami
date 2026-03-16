@@ -330,6 +330,8 @@ leaflet::leaflet(data = patients) |>
 
 Based on this data, would it be reasonable to make statistical inference for the whole of USA? For the whole world?
 
+--> All of the data is concentrated in just a few states! It is not repressentative of all of the uSA and definitely not the whole world.
+
 # Linkage
 
 The patients data might not be very interesting on its own, if we are interested in
