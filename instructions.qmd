@@ -255,7 +255,7 @@ We only need a single date however, so no need to read the whole file (no proble
 unzip("data.zip", files = "data-fixed/payer_transitions.csv")
 lastdate <-
   duckplyr::read_csv_duckdb("data-fixed/payer_transitions.csv") |>
-  summarise(lastdate = max(end_date)) |>
+  summarise(lastdate = max(start_date)) |>
   collect() |>
   pluck("lastdate") |>
   as.Date()

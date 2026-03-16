@@ -58,5 +58,8 @@ list(
   tar_target(
     name = model,
     command = coefficients(lm(y ~ x, data = data))
-  )
+  ),
+
+  tar_target(patient_validation, 
+    export_report(checks, "patient_validation.html"))
 )
