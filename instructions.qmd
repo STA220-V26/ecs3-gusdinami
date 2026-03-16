@@ -213,8 +213,8 @@ Some variables might also look like good factor candidates but might already hav
 ```{r}
 #| eval: false
 patients[,
-  names(.SD) := lapply(as.factor),
-  .SDcols = c("____", "____", ..., "____")
+  names(.SD) := lapply(.SD, as.factor),
+  .SDcols = c("race", "state")
 ]
 ```
 
@@ -227,6 +227,10 @@ patients[, .N, .(gender, race, state)][order(N)]
 ```
 
 Whould it be sensible to present data in a later stage where individual persons might be able to identify themselves? Do you have the ethical permission to present such data (you obviously had the permission to retrieve the data, but that is not the same thing)? Should certain groups be combined when analyzed? Maybe we don't need such detailed classification of "race" for example? Use `forcats::fct_lump_prop()` to reclassify that variable.
+
+```{r}
+forcats::fct_lump_prop(patients$race, prop = 0.1)
+```
 
 # Derived variables
 
