@@ -432,10 +432,21 @@ ggplot(cond_by_year[.(top5), on = "value"], aes(year, N, color = value)) +
   )
 ```
 
-- Wath happens in the end? Is it really reasonable to include tha last year (we were looking at the assumed data extraction date earlier)
+- What happens in the end? Is it really reasonable to include that last year (we were looking at the assumed data extraction date earlier)
+
+-> I think the year 2025 was not finished when the data was extracted, which makes it LOOK like the numbers went down, but actually it's justthat not all the data is present.
+
 - What happened early in history? Do we actually have all relevant data already from the start or should we focus on years which are more acurately recorded?
+
+-> It's incredibly possible that they didn't used to have as consistent recording as we do now. 
+
 - Does this visualisation tell us anything? Are certain conditions more common today or do we need to standardize the numbers with account to population size or health seeking behaviour etc.
+
+-> We would definitely need to standardize numbers to population size, health seeking behaviour (which is also influenced by how much the government or the WHO encourages people to seek medical care, for example), data accuracy (perhaps less accurate in earlier years).
+
 - Are patients sicker today or do they get more treatment for conditions which might have been undertreated in the past?
+
+-> I think they get more treatment. For example gingivitis, there has been a huge push in dental health and specifically gum health in more recent years. People are more aware, and more likely to seek medical care.
 
 # Submit
 
