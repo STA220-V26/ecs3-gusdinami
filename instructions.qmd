@@ -116,23 +116,35 @@ checks <-
     as.Date("1900-01-01"),
     as.Date(Sys.Date()),
     na_pass = TRUE,
-    label = "WHAT DO WE CHECK HERE? DESCRIBE!"
+    label = "check that all dates (birth and death) are between 1900 and today's date)"
   ) |>
   col_vals_gte(
     deathdate,
     vars(birthdate),
     na_pass = TRUE,
-    label = "ADD SOMETHING!"
+    label = "check that death date, if it exists, is greater than birth date"
   ) |>
   col_vals_regex(
     ssn, # This variable was described in ECS1!
     "[0-9]{3}-[0-9]{2}-[0-9]{4}$",
-    label = "WHAT ON EARTH DOES THIS MEAN?"
+    label = "check that this is a valid ssn  (correct format) ([3 digits]-[2 digits]-[3 digits])"
   ) |>
   col_is_integer(
     id,
-    label = "ADD ..."
+    label = "check that the id is an integer"
   ) |>
+    col_vals_in_set(
+      gender,
+      c("M", "F", "X"),
+      label = "check that gender is one of three recognized markers in the US") |>
+    col_vals_in_set(
+      ethnicity,
+      c("hispanic", "nonhispanic"),
+      label = "check that ethnicity is one of two recognized in the US") |>
+    col_vals_in_set(
+      marital,
+      c("D", "M", "S", "W"),
+      label = "check that marital status is one of [divorced, married, single, widowed]") |>
   interrogate()
 
 checks
